@@ -1,0 +1,911 @@
+
+/* Main Template Styles */
+:root {
+    --primary: #EFB425;
+    --secondary: #00ced1;
+    --Nav-Bar-Background-Color: #222222;
+    --Nav-Bar-Height: 50px;
+    --Nav-Bar-Height: 50px;
+    --Mobile-Nav-Icon-Color: #ffffff;
+    --Nav-Bar-Max-Width: 1200px;
+    --Nav-Bar-Height: 50px;
+    --Nav-Logo-Width: 120px;
+    --Nav-Logo: url(/users/myteam33814/Media1591.png);
+    --Nav-Logo-Size: 100%;
+    --Nav-Logo-Width: 200px;
+    --Nav-Bar-Height: 50px;
+    --Nav-Msg-Font-Size: 20px;
+    --Nav-Font-Size: 14px;
+    --Nav-Font-Color: #ffffff;
+    --Nav-Link-Horz-Padding: 20px;
+    --Nav-Bar-Height: 50px;
+    --Nav-Font-Hover-Color: #ffffff;
+    --Nav-Hover-Background-Color: #0000000a;
+    --Nav-Dropdown-Font-Color: #ffffff;
+    --Nav-Dropdown-Background-Color: #67676d;
+    --Nav-Dropdown-Font-Hover-Background-Color: #FFFFFF;
+    --Nav-Dropdown-Hover-Background-Color: #727279;
+    --Body-Background-Color: #ffffff;
+    --Body-Background-Image: url("");
+    --Default-Font-Size: 16px;
+    --Default-Text-Color: #0f0f0f;
+    --Heading-1-Font-Size: 27px;
+    --Heading-2-Font-Size: 18px;
+    --Homepage-Default-Background: url(/users/myteam33814/Media2218-jpg);
+    --Hyperlink-Color: #56aaff;
+    --Hyperlink-Hover-Color: #005fbf;
+    --Button-One-Color: #00ced1;
+    --Button-One-Hover-Color: #666;
+    --Button-Two-Color: #f86c0a;
+    --Button-Two-Hover-Color: #f86c0a;
+    --Body-Max-Width: 950px;
+    --Banner-Text-Color: #ffffff;
+    --Banner-Vignette-Color: #ffffff66;
+    --Bottom-Text-Color: #7e7e87;
+    --Bottom-Background-Color: #343438;
+    --Bottom-Link-Hover-Color: #ffffff;
+    --Seasons-Text-Color: #b3b2b2;
+    --Footer-Nav-Font-Color: #ffffff;
+    --Footer-Nav-Font-Hover-Color: #56aaff;
+    --Footer-Link-Drop-Down-Font-Hover-Background-Color: #FFFFFF;
+    --Group-Name-Font-Color: #003366;
+    --Welcome-Text-Color: #444449;
+    --News-Blog-Text-Color: #000000;
+    --News-Blog-Link-Color: #005fbf;
+    --Comments-Text-Color: #000000;
+    --Comments-Link-Color: #56aaff;
+    --Mobile-Nav-Icon-Size: 32px;
+    --Mobile-Nav-Bar-Height: 50px;
+    --Mobile-Nav-Bar-Height: 50px;
+    --Mobile-Nav-Bar-Height: 50px;
+    --Mobile-Nav-Bar-Height: 50px;
+    --Mobile-Nav-Logo-Width: 175px;
+    --Mobile-Nav-Bar-Height: 50px;
+    --Mobile-Nav-Logo-Width: 175px;
+    --Mobile-Navigation-Drop-Down-Background-Color: #444449;
+    --Selected-Text-Color: #ffffff;
+    --Highlighted-Text-Background: #00ced1aa;
+    --Selected-Text-Color: #ffffff;
+    --Highlighted-Text-Background: #00ced1aa
+};
+/*--------------------------------------------
+| TOP NAVIGATION STYLES                      |
+--------------------------------------------*/
+.control_panel {
+	background-color:	var(--Nav-Bar-Background-Color);
+	-moz-box-shadow:	0px 4px 4px #888;
+	-webkit-box-shadow: 0px 2px 3px 0px #0000002b;
+	box-shadow:			0px 2px 3px 0px #0000002b;
+	width:				100%;
+	text-align: 		center;
+	position:			fixed;
+	z-index:			5000;
+	height:				var(--Nav-Bar-Height);	
+}
+
+.navSpacer{
+	height:				var(--Nav-Bar-Height);
+}
+
+
+/*Style 'show menu' label button and hide it by default*/
+.show-menu {
+	text-decoration: 	none;
+	color: 				var(--Mobile-Nav-Icon-Color);
+	text-align: 		right;
+	display: 			none;
+}
+
+/*Hide checkbox*/
+input[type=checkbox]{
+    display: 			none;
+}
+
+/*Show menu when invisible checkbox is checked*/
+input[type=checkbox]:checked ~ #nav{
+    display: 			inline;
+}
+
+
+    
+.panelbox {
+    max-width: var(--Nav-Bar-Max-Width);
+    margin: 0 auto;
+}
+
+a#topLeftLogo {
+    height: var(--Nav-Bar-Height);
+    width: var(--Nav-Logo-Width);
+    background-image: var(--Nav-Logo);
+    float: left;
+    background-repeat: no-repeat;
+    background-size: auto var(--Nav-Logo-Size);
+    background-position: left center;
+    display: block;
+}
+.panelbox:before {
+    /* Nav-TextUse General tab CSS to Activate */
+    content: '';
+    float: left;
+    position: relative;
+    left: var(--Nav-Logo-Width);
+    line-height: var(--Nav-Bar-Height);
+    font-size: var(--Nav-Msg-Font-Size);
+    color: #777;
+    margin-right: -100%;
+}
+#controlPanel ul {
+	text-align: 		center;
+	position: 			relative;
+	padding: 			0;
+	margin: 			0;
+    float:              right;
+}
+#nav{
+	list-style:			none;
+	/* Clear floats */
+	z-index:			5000;
+	position:			relative;
+	margin:				0;
+}
+
+#nav li{
+	float:				left;
+	position:			relative;
+}
+
+#nav a{
+	font-size: 			var(--Nav-Font-Size);
+	display:			block;
+	color:				var(--Nav-Font-Color);
+	text-decoration:	none !important;
+	text-align:			center;
+	padding:			0 var(--Nav-Link-Horz-Padding);
+    line-height:        var(--Nav-Bar-Height);
+}
+
+#nav a:hover{
+	color:				var(--Nav-Font-Hover-Color);
+	background:			var(--Nav-Hover-Background);
+	text-decoration:	none;
+}
+
+/* Navigation CSS - DROPDOWN -*/
+#nav ul{
+	background:			#fff; /* Adding a background makes the dropdown work properly in IE7+. Make this as close to your page's background as possible (i.e. white page == white background). */
+	background:			rgba(255,255,255,0); /* But! Let's make the background fully transparent where we can, we don't actually want to see it if we can help it... */
+	list-style:			none;
+	position:			absolute;
+	right:				-9999px; /* Hide off-screen when not needed (this is more accessible than display:none); */
+	padding:			0; /* This gets rid of any alignment issues */
+}
+
+#nav ul li{
+	padding-top:		0px; /* Introducing a padding between the li and the a give the illusion spaced items */
+	float:				none;
+}
+
+#nav ul a {
+    white-space: nowrap;
+    padding: 15px 20px;
+    border: 0;
+    line-height: 1.2;
+}
+#nav li:hover ul{ 		/* Display the dropdown on hover */
+	right:				0; /* Bring back on-screen when needed */
+	float:				left;
+}
+
+#nav li:hover a{ 			/* These create persistent hover states, meaning the top-most link stays 'hovered' even when your cursor has moved down the list. */
+	text-decoration:	underline;
+}
+
+#nav li:hover ul a{ 		/* The persistent hover state does however create a global style for links even before they're hovered. Here we undo these effects. */
+	text-decoration:	none;
+	color:				var(--Nav-Dropdown-Font-Color);
+	background:			var(--Nav-Dropdown-Background);
+}
+
+#nav li:hover ul li a:hover{ /* Here we define the most explicit hover states--what happens when you hover each individual link. */
+	color:				var(--Nav-Dropdown-Font-Hover-Background);
+	text-shadow: 		1px 1px 5px #000;
+	text-decoration:	underline;
+	background:			var(--Nav-Dropdown-Hover-Background);
+}
+
+
+
+
+/*--------------------------------------------
+| BODY CONTENT STYLES                        |
+--------------------------------------------*/
+body {
+	width: 				100%;
+	padding:			0;
+	margin: 			0;
+	background-color:	var(--Body-Background-Color);
+	background-image:	var(--Body-Background-Image);
+    font-size: 			var(--Default-Font-Size);
+	color:				var(--Default-Text-Color);
+	text-align:			left;
+	font-weight: 		300;
+	background-repeat:	no-repeat;
+	background-position: top;
+	background-size:	cover;
+}
+
+/* Default Headings */
+h1 {
+	font-size: 			var(--Heading-1-Font-Size);
+    margin: 0;
+    text-transform: capitalize;
+    font-weight: normal;
+}
+h2 {
+	font-size: 			var(--Heading-2-Font-Size);
+    font-weight:        bold;
+	margin:				0;
+}
+
+/* Jailbreak for auto-login pages. !! CHANGE UNDER GENERAL TAB !! */
+div#homepageMain {
+	background-image: var(--Homepage-Default-Background);
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: center;
+	font-weight: normal;
+	padding: 40px 0;
+	height: 470px;
+}
+div#homepage {
+	max-width: 750px;
+	margin: auto;
+	background-color: #fff;
+	padding: 30px;
+	text-align: center;
+	filter: drop-shadow(0 0 4px #000000aa);
+	-webkit-filter: drop-shadow(0 0 4px #000000aa);
+}
+#homepage > div[style="clear: both;margin-top: 10px;"]:first-of-type {
+	display: none;
+}    
+
+.customPage {
+	clear: 				both;
+	display: 			none;
+	width: 				100%;
+}
+
+.customPageContent {
+	overflow:			hidden;
+}
+
+#main {
+	width: 				100%;
+	height:				100%;
+	margin:				0;
+	padding:			0;
+	z-index: 			991;
+	position:			relative;
+    overflow: hidden;
+}
+
+.interior {
+	position:			relative;
+	margin-bottom: 		10px;
+	text-align:			left;
+	padding:			0px;
+}
+
+    
+/* Default Links and Buttons */
+img {
+	border:				0;
+}
+
+a, a:link, a:visited {
+	color: 				var(--Hyperlink-Color);
+	text-decoration:	none;
+	cursor: 			pointer;
+}
+
+a:hover {
+	color: 				var(--Hyperlink-Hover-Color);
+	text-decoration:	underline;
+    }
+a, #button, .button, input[type="submit"] {
+    cursor: pointer;
+}
+a img {
+    -webkit-transition: 500ms;
+    transition: 500ms;
+}
+a img:hover {
+    -webkit-filter: brightness(.8);
+    filter: brightness(.8);
+}
+    
+
+.button.one {
+    display: inline-block;
+    background: var(--Button-One-Color);
+    color: #fff;
+    padding: 10px 25px;
+    border-radius: 5px;
+    transition: 300ms;
+}
+.button.one:hover {
+    background: var(--Button-One-Hover-Color);
+}
+.button.two {
+    display: inline-block;
+    padding: 15px 20px;
+    border-radius: 5px;
+    background: var(--Button-Two-Color);
+    color: #fff;
+    transition: 300ms;
+}
+.button.two:hover {
+    background: var(--Button-Two-Hover-Color);
+    transform: translateY(-3px);
+    box-shadow: 0 4px 5px -1px #00000077, 0 0 1px #00000055;
+}
+input {
+    -webkit-appearance: none !important;
+}
+    
+
+    
+
+/*--- Template for Wide Panels ---*/
+section {
+    width: 100%;
+    min-height: 50px;
+}
+.contentBox {
+    max-width: var(--Body-Max-Width);
+    padding: 30px;
+    margin: 0 auto;
+}
+
+/*--- Template for Banners ---*/
+section.banner {
+    background-size: cover;
+    background-position: center 50%;
+    width: 100%;
+    min-height: 50px;
+    color: var(--Banner-Text-Color);
+    filter: drop-shadow(rgba(0, 0, 0, 0.4) 1px 2px 2px);
+    text-shadow: rgba(0, 0, 0, 0.2) 1px 2px 2px;
+    line-height: 1.3;
+    box-shadow: inset 0 0 100px 30px var(--Banner-Vignette-Color);
+}
+section.banner div.bannerContent {
+    padding: 13vh 20px;
+    line-height: 1.3;
+    text-align:center;
+}
+section.banner h1 {
+    font-size: 50px;
+    line-height: 1.3;
+    word-spacing: 10px;
+    font-family: 'Roboto Condensed', sans-serif, Arial;
+    font-weight: normal;
+}
+section.banner h1.shadow {
+    max-width: 800px;
+    text-align: center;
+    padding: 25px 35px;
+    background: #00000055;
+    filter: drop-shadow(rgba(0, 0, 0, 0.4) 1px 2px 2px);
+}
+/*Banner .ProFull **NOT TO BE USED UNTIL FIXED INSTANCES OF PROFFULL IN PATHWAY WEBSITES**
+section#banner.profFull .contentBox {
+    overflow: hidden;
+    max-width: none;
+    min-height: 90vh;
+    padding: 0;
+}
+section.banner.profFull div.bannerContent {
+    padding: 175px 5% 0;
+    line-height: 1.3;
+}*/
+    
+/*Banner .BlogBack*/
+
+/*--------------------------------------------
+| BOTTOM AREA STYLES                         |
+--------------------------------------------*/
+.bottom {
+	color:				var(--Bottom-Text-Color);
+	font-size:			13px;
+	background-color: 	var(--Bottom-Background-Color);
+	width: 				100%;
+	height:				250px;
+	bottom:				0;
+	margin:				0;
+	padding:			0;
+}
+
+.bottom a:hover {
+	color:				var(--Bottom-Link-Hover-Color);
+	text-decoration:	underline;
+}
+
+
+#seasonsList {
+	font-style:			italic;
+	font-size:			11px;
+	text-align:			center;
+	width:				100%;
+	color: 				var(--Seasons-Text-Color);
+}
+
+.seasonOdd {
+	position:			relative;
+	display:			block;
+	height: 			20px;
+	width: 				400px;
+	background-color:	#D9F5FF;
+}
+
+.seasonOdd a {
+	font-style:			italic;
+}
+
+.seasonEven {
+	display:			block;
+	height: 			20px;
+	width: 				400px;
+	background-color:	#F1FCFE;
+}
+
+#poweredBy {
+	text-align:			center;
+	margin-top:			10px;
+}
+
+.quicklinks {
+	width: 				220px; 
+	text-align: 		left; 
+	float: 				left; 
+	margin-top: 		20px; 
+	margin-bottom: 		20px;
+	margin-left:		40px;
+}
+
+.bottomwidget {
+	height: 			200px; 
+	text-align: 		left; 
+	float: 				left; 
+	overflow: 			auto; 
+	border-left: 		dotted 1px #7e7e87; 
+	padding-left: 		40px; 
+	margin-top: 		20px; 
+	margin-bottom: 		20px;
+}
+
+
+/*--------------------------------------------
+| BOTTOM NAV STYLES                          |
+--------------------------------------------*/
+#nav_2{
+	list-style:			none;
+	/* Clear floats */
+	z-index:			5000;
+	text-align:			left;
+	line-height:		20px;
+	margin-top:			10px;
+	padding-left:		0;
+	float:				left;
+	position:			relative;
+}
+
+#nav_2 li{
+	margin-left:		0;
+	padding-left:		0;
+	position:			relative;
+}
+
+#nav_2 a{
+	font-size: 			13px;
+	color:				var(--Footer-Nav-Font-Color);
+	text-decoration:	none;
+}
+
+#nav_2 a:hover{
+	color:				var(--Footer-Nav-Font-Hover-Color);
+	text-decoration:	none;
+}
+
+/* Bottom CSS Styles - DROPDOWN */
+#nav_2 ul{
+	display:			none;
+}
+
+#nav_2 ul li{
+	padding-top:		0px; /* Introducing a padding between the li and the a give the illusion spaced items */
+	float:				left;
+}
+
+#nav_2 ul a{
+	white-space:		nowrap; /* Stop text wrapping and creating multi-line dropdown items */
+}
+
+#nav_2 li:hover ul{ 			/* Display the dropdown on hover */
+	display:			none;
+}
+
+#nav_2 li:hover a{ 			/* These create persistent hover states, meaning the top-most link stays 'hovered' even when your cursor has moved down the list. */
+	text-decoration:	underline;
+}
+
+#nav_2 li:hover ul a{ 		/* The persistent hover state does however create a global style for links even before they're hovered. Here we undo these effects. */
+	display:			none;
+}
+
+#nav_2 li:hover ul li a:hover{ /* Here we define the most explicit hover states--what happens when you hover each individual link. */
+	color:				var(--Footer-Link-Drop-Down-Font-Hover-Background);
+}
+
+ul#nav.extra li {
+    float: right;
+}
+#nav.extra li a#login {
+    background-color: #00ced1;
+    box-shadow: inset 0px 0px 5px -5px #ffffff33;
+    color: #fff;
+    transition: 200ms;
+}
+#nav.extra li a#login:hover {
+    box-shadow: inset 160px 0px 5px -5px #ffffff33;
+}
+    
+
+
+
+
+
+
+
+
+/* 
+ ______________________________________
+/  ________________________________    \
+|  |                               |   |
+|  |                               |   |
+|  |                               |   |
+|  |                               |   |
+|  |      Styles for Tablets       | O |
+|  |                               |   |
+|  |                               |   |
+|  |                               |   |
+|  |_______________________________|   |
+\______________________________________/
+
+*/
+
+@media screen and (max-width : 1024px){
+.logo img {
+	width:				125px;
+	margin-bottom: 		-67px;
+	margin-left: 		10px;
+}
+
+.center_box {
+	max-width:			auto;
+	min-width: 			auto;
+}
+
+.panelbox {
+	width:				100%;
+	margin-left:		auto;
+	margin-right:		auto;
+	margin-bottom:		0;
+}
+
+.responsiveImage {
+	max-width:			620px !important;
+	height:				auto !important;
+}
+
+.wideNewsContent table {
+	width: 				100% !important;
+}
+
+#storeItems {
+	font-size:			16px !important;
+}
+
+#storeTable {
+	width:				100% !important; 
+}
+
+#storeTable td {
+	border-right:		0px !important;
+}
+
+.store_item_left_column img {
+    padding: 10px;
+    width: 250px !important;
+    height: auto !important;
+    }
+}
+
+/* 
+ _____________________
+/  _________________  \
+| |                 | |
+| |                 | |
+| |                 | |
+| |                 | |
+| |     Styles      | |
+| |                 | |
+| |      for        | |
+| |                 | |
+| |     Mobile      | |
+| |                 | |
+| |                 | |
+| |                 | |
+| |                 | |
+| |_________________| |
+|          o          |
+ '-------------------'
+
+*/
+@media screen and (max-width : 768px){
+
+.center_box {
+	width:				100%;
+	min-width: 			300px;
+}
+
+.responsiveImage {
+	max-width:			520px !important;
+	height:				auto !important;
+}
+
+.interior table {
+	max-width: 			650px !important; 
+}
+
+
+/*Display 'show menu' link*/
+.show-menu {
+    display: block;
+    z-index: 500000;
+    font-size: var(--Mobile-Nav-Icon-Size);
+    padding: 0 20px;
+    line-height: var(--Mobile-Nav-Bar-Height);
+}
+
+/*Make dropdown links appear inline*/
+#controlPanel ul {
+	position:			static;
+	display:			none;
+}
+
+/*Create vertical spacing*/
+#controlPanel li {
+	margin-bottom:		0px;
+}
+
+/*Make all menu links full width*/
+#controlPanel ul li, li a {
+	width:				100%;
+}
+
+#controlPanel {
+	text-align: 		center;
+	width:				100%;
+}
+
+.control_panel {
+	height:				var(--Mobile-Nav-Bar-Height);
+	font-size:			18px;
+}
+
+.navSpacer {
+	height:				var(--Mobile-Nav-Bar-Height);
+}
+
+a#topLeftLogo {
+    height:         var(--Mobile-Nav-Bar-Height);
+    width:          var(--Mobile-Nav-Logo-Width);
+    }
+.panelbox:before {
+    line-height: var(--Mobile-Nav-Bar-Height);
+    left: var(--Mobile-Nav-Logo-Width);
+}
+#nav {
+	width:				100%
+}
+	
+#nav a {
+	margin-left: 		0px;
+	padding:			5px 0px 5px 0px !important;
+	background-color:	var(--Mobile-Navigation-Drop-Down-Background);
+	z-index:			50000;    
+    line-height: 35px;
+
+}
+
+#nav li {
+	margin-right:		0px;
+}
+
+#nav li:hover ul{ 
+	display:			block;
+	width: 				100%;
+}
+
+#nav ul a {
+	padding:			0;
+}
+
+    
+#nav.extra li a#login:hover {
+    box-shadow: inset -5px 60px 5px -5px #ffffff33;
+}
+    
+.logo img {
+	width:				125px;
+	margin-bottom: 		-67px;
+	margin-left: 		10px;
+}
+
+#content {
+	padding:			0px 20px;
+}
+
+.TabsPro_content img {
+	width:				400px;
+}
+
+.panelbox {
+	width:				100%;
+	margin-left:		auto;
+	margin-right:		auto;
+	margin-bottom:		0;
+}
+
+#teamName {
+	font-size:			14px;
+	margin-top:			0px;
+}
+
+#welcomeMessage {
+	font-size:			10px;
+}
+
+.bottom {
+	min-height:			500px;
+}
+
+#nav_2 {
+	z-index: 			0;
+}
+
+.quicklinks	{
+	margin-bottom:		0px;
+	margin-left:		10px;
+	margin-right:		10px;
+	width:				auto;
+}
+
+.social {
+	width:				30px;
+	height:				auto;
+}
+
+.bottom {
+	min-height:			250px;
+	height:				auto;
+}
+
+.blogSocialShares {
+	display:			none;
+}
+
+.blogSocialWrapper {
+	display:			none;
+}
+.wideNewsContent table {
+	width: 			100% !important;
+}
+
+.featureBox {
+	float: 				none;
+	width: 				100%;
+	padding-right: 		0px;
+}
+
+.store_item_left_column img {
+	padding: 10px; 
+	width: 150px !important; 
+	height: auto !important;
+}
+#storeTable td {
+    border-right: 0px !important;
+    display: inline-block;
+}
+#leftNav-{
+    display: inline-block !important;
+}
+.customPageContent td {
+	display:inline-block;
+}
+.customPageContent table {
+	width: 100% !important;
+}
+}
+
+/* 
+ ________________
+/ ______________ \
+||              ||
+||              ||
+||              ||
+||    Styles    ||
+||      for     ||
+||     Small    ||
+||    Mobile    ||
+||              ||
+||              ||
+||              ||
+||______________||
+|        o       |
+ '--------------'
+
+*/
+@media screen and (max-width : 500px){
+    
+section.banner h1 {
+    font-size: 35px;
+}
+
+section.banner .contentBox {
+    padding: 0;
+}
+section.banner div.bannerContent {
+    padding: 8vh 20px;
+}
+.responsiveImage {
+	max-width:			480px !important;
+	height:				auto !important;
+}
+
+.store_item_right_column {padding: 10px !important;
+    }
+.responsiveImage {
+	max-width:			330px !important;
+	height:				auto !important;
+	float:				none !important;
+}
+
+.wideNewsContent table {
+    width: 100% !important;
+    }
+#homepageContentTable {
+    display: none;
+    }
+.facebookIframe {
+    width: 210px !important;
+    }
+}
+
+
+    .userCRM {
+        display:none;
+    }
+    
+    
+/*These are placed here to always go at the very bottom of the Customization Table*/
+::selection {
+    color: var(--Selected-Text-Color);
+    background: var(--Highlighted-Text Backgroundaa);
+}
+::-moz-selection {
+    color: var(--Selected-Text-Color);
+    background: var(--Highlighted-Text Backgroundaa);
+}
