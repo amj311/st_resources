@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recent Blogs Test</title>
+
+    <!-- HEAD ADDITIONS (GENERAL TAB)-->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <script src="../widget-loader.js"></script>
+    <script src="RecentBlogs.vue.js"></script>
+    <script>
+        const CONFIG = {
+            RECENT_BLOGS: {
+                RSS_URL: "https://app.steadytide.com/rss.pl?33814_21_Blog",
+                QTY: 5,
+                SHOW_THUMBNAILS: true,
+                DEFAULT_THUMBNAILS: [
+                    "https://www.thewowstyle.com/wp-content/uploads/2015/01/nature-images.jpg",
+                    "http://www.thewowstyle.com/wp-content/uploads/2015/01/house-in-green-field.jpg"
+                ],
+            }
+        }
+    </script>
+
+    <style>
+        #RecentBlogsVueWrapper .strb-blog-title {
+            font-weight: bold;
+            font-size: 1.1em;
+            font-family: sans-serif;
+        }
+        #RecentBlogsVueWrapper .strb-blog-blurb {
+            margin: 1em 0;
+        }
+    </style>
+    
+    <!-- END HEAD ADDITIONS -->
+</head>
+<body>
+    <!-- RECENT BLOGS -->
+    <section>
+        <h1>Recent Blogs</h1>
+        <div id="brett-st-blog" class="st-widget-placeholder"></div>
+        <script>insertWidget("recentblogs", "brett-st-blog", CONFIG.RECENT_BLOGS)</script>
+    </section>
+
+</body>
+
+</html>
